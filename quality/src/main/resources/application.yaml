@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: Quality
+    title: Quality Control
+    version: 0.1
+    url: https://siemens.com
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: false
+        default_schema: quality
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    generate-ddl: false
+server:
+  port: 5001
+  servlet:
+    context-path: /quality
